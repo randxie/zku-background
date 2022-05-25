@@ -21,3 +21,11 @@ I will tell my friend whether the number of leaves is an odd number or even numb
 5. How are smart contracts deployed? List the necessary steps.
 
 hardhat rocks!! To deploy a smart contract, I will firstly compile the contract to generate the ABI, then call the deploy method with my signature.
+
+7. Is the new design better over having separate confirmReceived() and refundSeller()? Why or why not?
+
+The new design is better in two aspects:
+(1) It simplifies the state management by reducing state "Release"
+(2) The process is simpler compared to two separate steps.
+
+However, the new design has less protection to buyer, because seller can wait until time elapsed without sending out items. 
