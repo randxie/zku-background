@@ -53,7 +53,7 @@ contract Purchase {
     modifier canComplete() {
         require(
             msg.sender == buyer ||
-                ((block.timestamp - purchaseConfirmedTime) >= 1 minutes),
+                ((block.timestamp - purchaseConfirmedTime) >= 5 minutes),
             "Complete condition not met."
         );
         _;
